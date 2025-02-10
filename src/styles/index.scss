@@ -1,0 +1,261 @@
+@import "./settings.scss";
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+
+    h1{
+        font-family: $fontB;
+    }
+    svg{
+        font-size: 1.4em;
+        cursor: pointer;
+    }
+
+}
+
+.sec-lang{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
+
+
+    @media screen and (max-width:500px) {
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+}
+
+.png-run-icon{
+   display: none;
+   @media screen and (max-width:800px) {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin: 10px;
+        color: rgb(17, 172, 6);
+        border-radius: 2px;
+        position: absolute;
+        top:70px;
+        right: 0;
+    }
+}
+
+
+.code-holder{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    border: 1px solid ;
+
+    @media screen and (max-width:800px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+code{
+    display: block;
+    min-height: 100vh;
+    min-width: 40vw;
+    width: 50vw;
+    height: 90vh;
+    font-size: 1.3em;
+    line-height: 25px;
+    padding: 10px 10px 30px 10px;
+    border: 1px solid ;
+    outline: none;
+    caret-color: blue;
+    resize: both;
+    overflow: auto;
+    overflow: scroll;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    @media screen and (max-width:800px) {
+        height: 70vh;
+        width: 100%;
+    }
+}
+
+.err{
+    color: rgb(238, 72, 72) !important;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 30px;
+    font-family: sans-serif,Arial,$fontL;
+    
+}
+
+.debug{
+    border-left: none;
+    padding: 15px;
+    overflow: auto;
+    height: 90vh;
+
+    @media screen and (max-width:800px) {
+        height: 400px;
+    }
+
+    @media screen and (min-width:800px) {
+        position: relative;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 2.6em;
+        font-family: $fontB;
+        color:rgb(138, 137, 137);
+
+        @media screen and (max-width:500px) {
+           font-size: 2em;
+           
+        }
+
+        +p{
+            font-size: 1.1em;
+            font-family: sans-serif;
+            line-height: 35px;
+            font-weight: bold;
+            font-family: $fontOutfit;
+
+        }
+
+    }
+
+
+    button{
+        position:fixed;
+        bottom: 10px;
+        right: 10px;
+        padding: 8px;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    
+
+}
+
+.run-btn{
+    font-weight: bold;
+    border-color: $Gray;
+    background-color: rgb(4, 231, 4);
+    font-family: $fontOutfit;
+    @media screen and (max-width:500px) {
+        display: none;
+    }
+}
+
+.running{
+    font-size: 1.02em;
+    color: white;
+    background-color: red;
+}
+
+.runtime-duration{
+    text-align: center;
+    margin: auto;
+    width: 100px;
+    padding: 8px;
+    color: white;
+    font-family:Georgia, sans-serif;
+    background-color: blue;
+}
+
+
+
+#langchoice{
+    padding: 10px;
+    font-size: 1.05em;
+    font-family: $fontOutfit;
+    width: 140px;
+    outline: none;
+
+    @media screen and (max-width:500px) {
+      width: 120px;
+      font-size: 1em;
+      height: 40px;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+.run-duration{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.8em;
+    color: rgb(55, 79, 236);
+    margin: 10px 10px 0 0;
+    font-family: sans-serif;
+}
+
+
+.dark-theme{
+    color: white;
+    background-color:$VeryDarkBlue ; 
+
+    header{
+        background-color: $VeryDarkDesaturated;
+    } 
+
+  
+    .debug h1 +p{
+        color: rgb(86, 244, 170);
+
+    }
+
+    #langchoice{
+        background-color: black;
+        color: white;
+    }
+}
+
+
+.light-theme{
+    color: black;
+    background-color: $Gray;
+
+        header{
+            background-color:$VeryLightGrayishBlue;
+            border: 1px solid gainsboro;
+        }
+
+
+    #langchoice{
+        background-color: lightblue;
+        color: black;
+    }
+
+    .debug h1 +p{
+        color: rgb(0, 86, 46);
+    }
+}
+
+.clean-output{
+    cursor: pointer;
+    font-size: 1.8em;
+    padding:3px;
+    border-radius: 4px 9px;
+    &:hover{
+        
+        background-color: rgb(119, 120, 120);
+    }
+}

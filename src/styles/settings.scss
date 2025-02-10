@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gainsboro;
+}
+@font-face {
+    font-family: 'dyna';
+    src: url(../assets/fonts/DynaPuff-VariableFont_wdth,wght.ttf)
+}
+
+@font-face {
+    font-family: 'outfit';
+    src: url(../assets/fonts/Outfit-Thin.ttf);
+}
+@font-face {
+    font-family: 'fb';
+    src: url(../assets/fonts/Asap_Condensed-Black.ttf);
+}
+@font-face {
+    font-family: 'fl';
+    src: url(../assets/fonts/Asap_SemiExpanded-Light.ttf);
+}
+
+
+
+$fontOutfit: 'outfit';
+$fontDyna: 'dyna';
+$fontB: 'fb';
+$fontL: 'fl';
+
+
+$VeryLightGrayishBlue: hsl(236, 33%, 92%);
+$DarkGrayishBlue: hsl(236, 9%, 61%);
+$VeryDarkrayisBlue: hsl(235, 19%, 35%);
+//DarkTheme
+$VeryDarkBlue: hsl(235, 21%, 11%);
+$VeryDarkDesaturated: hsl(235, 24%, 19%);
+$LightGrayishBlue: hsl(234, 39%, 85%);
+$LightGrayish: hsl(236, 33%, 92%);
+$DarkGrayishBlue: hsl(234, 11%, 52%);
+$VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+$VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+
+$Gray: hsl(0, 0%, 91%);
+$GrayishViolet: hsl(257, 7%, 63%);
+$gainsoboro: hsl(0, 0%, 55%);
+$VeryDarkBlue: hsl(255, 11%, 22%);
+$VeryDarkViolet: hsl(260, 8%, 14%);
