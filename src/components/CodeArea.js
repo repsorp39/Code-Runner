@@ -98,7 +98,7 @@ const CodeArea = () => {
       } catch (error) {
           setOutputResult("");
           setError(
-            error?.response?.data?.output || error?.response?.data?.message || "Something broke. Please try later!"
+            error?.response?.data?.output || error?.response?.data?.message 
         );
       } finally {
         setRunning(false);
