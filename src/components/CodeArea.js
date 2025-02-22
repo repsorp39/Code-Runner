@@ -98,7 +98,7 @@ const CodeArea = () => {
       } catch (error) {
           setOutputResult("");
           setError(
-            error?.response?.data?.output || error?.response?.data?.message 
+            error?.response?.data?.output || error?.response?.data?.message || "Server is down actually. Please try later!"
         );
       } finally {
         setRunning(false);
